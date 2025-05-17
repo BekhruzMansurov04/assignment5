@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 18: Splice Examples</title>
+</head>
+<body>
+    <a href="index.html">Back to pre</a>
+  <script>
+    let arr = ["a", "b", "c", "d", "e"];
+    alert("Original array: " + arr);
+
+    // Delete
+    arr.splice(2, 1);
+    alert("After deleting index 2: " + arr);
+
+    // Insert
+    arr.splice(2, 0, "x");
+    alert("After inserting 'x' at index 2: " + arr);
+
+    // Replace
+    arr.splice(1, 1, "y");
+    alert("After replacing index 1 with 'y': " + arr);
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 17: Find Location in String</title>
+</head>
+<body>
+    <a href="index.html">Back to pre</a>
+  <script>
+    const sentence = prompt("Enter a sentence:");
+    const word = prompt("Enter a word to search:");
+    const index = sentence.indexOf(word);
+
+    if (index !== -1) {
+      alert(`Word found at position: ${index}`);
+    } else {
+      alert("Word not found.");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 15: Find Longest Word</title>
+</head>
+<body>
+    <a href="index.html">Back to pre</a>
+  <script>
+    const sentence = prompt("Enter a sentence:");
+    const words = sentence.split(" ");
+    let longest = "";
+
+    words.forEach(word => {
+      if (word.length > longest.length) {
+        longest = word;
+      }
+    });
+
+    alert("Longest word: " + longest);
+  </script>
+</body>
+</html>

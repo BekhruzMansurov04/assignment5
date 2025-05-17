@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 16: Toggle Case</title>
+</head>
+<body>
+    <a href="index.html">Back to pre</a>
+  <script>
+    const input = prompt("Enter a word:");
+    let result = "";
+
+    for (let char of input) {
+      if (char === char.toUpperCase()) {
+        result += char.toLowerCase();
+      } else {
+        result += char.toUpperCase();
+      }
+    }
+
+    alert("Converted: " + result);
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 13: Word Search and Repeats</title>
+</head>
+<body>
+  <h2>Task 13: Word Search and Repeated Characters</h2>
+  <a href="index.html">Back to pre</a>
+  <script>
+    const input = prompt("Enter words separated by commas:");
+    const words = input.split(',').map(w => w.trim());
+    const searchWord = prompt("Enter a word to search in the array:").trim();
+
+    if (words.includes(searchWord)) {
+      alert(`✅ The word "${searchWord}" was found in the array.`);
+    } else {
+      alert(`❌ The word "${searchWord}" was NOT found in the array.`);
+    }
+
+    const charMap = {};
+    let repeated = [];
+    for (let char of searchWord) {
+      charMap[char] = (charMap[char] || 0) + 1;
+    }
+    for (let char in charMap) {
+      if (charMap[char] > 1) {
+        repeated.push(`${char} (x${charMap[char]})`);
+      }
+    }
+
+    if (repeated.length > 0) {
+      alert(`Repeated characters in "${searchWord}":\n` + repeated.join(', '));
+    } else {
+      alert(`No repeated characters in "${searchWord}".`);
+    }
+  </script>
+</body>
+</html>

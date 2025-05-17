@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 7: Arithmetic Function</title>
+</head>
+<body>
+    <a href="index.html">Back to pre</a>
+  <script>
+    const num1 = parseFloat(prompt("Enter first number:"));
+    const num2 = parseFloat(prompt("Enter second number:"));
+    const operation = prompt("Choose operation: add, subtract, multiply, divide").toLowerCase();
+
+    function calculate(a, b, op) {
+      switch(op) {
+        case 'add':
+          return a + b;
+        case 'subtract':
+          return a - b;
+        case 'multiply':
+          return a * b;
+        case 'divide':
+          return b !== 0 ? a / b : "Cannot divide by zero";
+        default:
+          return "Invalid operation";
+      }
+    }
+
+    alert(`Result: ${calculate(num1, num2, operation)}`);
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3: Signup Form</title>
+</head>
+<body>
+  <h2>Signup Form</h2>
+  <form id="signupForm">
+    <label>Name: <input type="text" id="name" required></label><br><br>
+    <label>Email: <input type="email" id="email" required></label><br><br>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+  <h3>Entered Data:</h3>
+  <p id="output"></p>
+  <a href="index.html">Back to pre</a>
+  <script>
+    const form = document.getElementById('signupForm');
+    const output = document.getElementById('output');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      output.textContent = `Name: ${name}, Email: ${email}`;
+    });
+  </script>
+</body>
+</html>

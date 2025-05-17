@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 14: Count Vowels</title>
+</head>
+<body>
+    <a href="index.html">Back to pre</a>
+  <script>
+    const input = prompt("Enter characters separated by commas:");
+    const chars = input.split(',');
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    let count = 0;
+
+    chars.forEach(char => {
+      if (vowels.includes(char.trim().toLowerCase())) {
+        count++;
+      }
+    });
+
+    alert("Number of vowels: " + count);
+  </script>
+</body>
+</html>

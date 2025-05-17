@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 20.2 - Matrix Guessing Game</title>
+  <style>
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    td {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border: 1px solid #000;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guessing Game</h1>
+  <a href="index.html">Back to pre</a>
+  <script>
+    let size = parseInt(prompt("Enter matrix size (3-5):", "3"));
+    if (isNaN(size) || size < 3 || size > 5) size = 3;
+
+    const targetRow = Math.floor(Math.random() * size);
+    const targetCol = Math.floor(Math.random() * size);
+
+    const table = document.createElement("table");
+    for (let i = 0; i < size; i++) {
+      const row = document.createElement("tr");
+      for (let j = 0; j < size; j++) {
+        const cell = document.createElement("td");
+        cell.textContent = "?";
+        cell.onclick = function () {
+          if (i === targetRow && j === targetCol) {
+            cell.textContent = "🎯";
+            alert("Correct! You found the target.");
+          } else {
+            cell.textContent = "❌";
+          }
+        };
+        row.appendChild(cell);
+      }
+      table.appendChild(row);
+    }
+
+    document.body.appendChild(table);
+  </script>
+</body>
+</html>

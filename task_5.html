@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 5: Countdown Timer</title>
+</head>
+<body>
+  <h2>Countdown Timer</h2>
+  <p id="timer">10</p>
+  <button onclick="startTimer()">Start</button>
+  <button onclick="pauseTimer()">Pause</button>
+  <button onclick="resetTimer()">Reset</button>
+  <a href="index.html">Back to pre</a>
+  <script>
+    let count = 10;
+    let interval;
+
+    function updateDisplay() {
+      document.getElementById('timer').textContent = count;
+    }
+
+    function startTimer() {
+      if (!interval) {
+        interval = setInterval(() => {
+          if (count > 0) {
+            count--;
+            updateDisplay();
+          } else {
+            clearInterval(interval);
+            interval = null;
+          }
+        }, 1000);
+      }
+    }
+
+    function pauseTimer() {
+      clearInterval(interval);
+      interval = null;
+    }
+
+    function resetTimer() {
+      pauseTimer();
+      count = 10;
+      updateDisplay();
+    }
+
+    updateDisplay();
+  </script>
+</body>
+</html>

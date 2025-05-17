@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 19: Text Analysis</title>
+</head>
+<body>
+    <a href="index.html">Back to pre</a>
+  <script>
+    const text = prompt("Enter a string:");
+    const words = text.trim().split(/\s+/).length;
+    const chars = text.length;
+    const spaces = (text.match(/ /g) || []).length;
+    const special = (text.match(/[^\w\s]/g) || []).length;
+
+    alert(`Words: ${words}\nCharacters: ${chars}\nSpaces: ${spaces}\nSpecial Symbols: ${special}`);
+  </script>
+</body>
+</html>
